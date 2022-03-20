@@ -32,3 +32,8 @@ variable "instance_tag" {
   type        = string
   description = "Instance name tag"
 }
+
+variable "ami_id" {
+  type        = string
+  description = "AWS AMI ID"
+}
