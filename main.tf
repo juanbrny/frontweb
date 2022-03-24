@@ -33,3 +33,13 @@ resource "aws_instance" "jump_host" {
     Name = "Jump host"
   }
 }
+
+resource "aws_instance" "monitoring_host" {
+  ami           =  var.ami_id
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "Monitoring host"
+  }
+}
+
