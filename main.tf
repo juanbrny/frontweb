@@ -24,3 +24,12 @@ resource "aws_instance" "app_server" {
     Name = var.instance_tag
   }
 }
+
+resource "aws_instance" "jump_host" {
+  ami           =  var.ami_id
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "Jump host"
+  }
+}
